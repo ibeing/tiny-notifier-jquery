@@ -1,0 +1,17 @@
+.notifier {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	padding: 10px;
+	text-align: justify;
+	border: 1px solid #ddd;
+	min-height: 30px;
+	margin-bottom: 10px;
+	margin-right: 10px;
+	width: 400px;
+	z-index: 999;
+	cursor: default;
+}
+.notifier-success { background-color: #2A8893 !important; }
+.notifier-error { background-color: #CF000F !important; color: #fff !important; }
+.notifier-info { background-color: #3498DB !important; }
