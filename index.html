@@ -26,6 +26,63 @@
 I wanted a simple, really very simple Notifier, was lazy to find one, so built one
 </p>
 
+<h4>
+<a id="the-css" class="anchor" href="#the-css" aria-hidden="true"><span class="octicon octicon-link"></span></a>the CSS</h4>
+
+<p><code></code></p>
+
+<pre>
+.notifier {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+    text-align: justify;
+    border: 1px solid #ddd;
+    min-height: 30px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    width: 400px;
+    z-index: 999;
+    cursor: default;
+}
+.notifier-success { background-color: #2A8893 !important; }
+.notifier-error { background-color: #CF000F !important; color: #fff !important; }
+.notifier-info { background-color: #3498DB !important; }
+</pre>
+
+<h4>
+<a id="-the-jquery-jquerydocumentreadyfunction------jqueryfnnotify--functionnotificationtext-notificationtypesuccess---------var-notificationclassname--notifier-notifier-notificationtype--------var-div---notificationtext---------jquerybodyappenddiv--------settimeoutfunction----------notifierfadeoutslow-----5000-----notify-mainclickfunction--thisfadeoutfast-----hidethis--function-this------------thisfadeoutfast----and-call-like-thisvar-test--testing-jquery-notificationbodynotifytest-" class="anchor" href="#-the-jquery-jquerydocumentreadyfunction------jqueryfnnotify--functionnotificationtext-notificationtypesuccess---------var-notificationclassname--notifier-notifier-notificationtype--------var-div---notificationtext---------jquerybodyappenddiv--------settimeoutfunction----------notifierfadeoutslow-----5000-----notify-mainclickfunction--thisfadeoutfast-----hidethis--function-this------------thisfadeoutfast----and-call-like-thisvar-test--testing-jquery-notificationbodynotifytest-" aria-hidden="true"><span class="octicon octicon-link"></span></a> the jQuery 
+<code><pre>
+jQuery(document).ready(function () {
+    jQuery.fn.notify = function(notificationText, notificationType='success') {
+        var notificationClassName = 'notifier notifier-'+notificationType;
+        var div = '<div id="notify-main">'+ notificationText +'</div>';
+        jQuery('body').append(div);
+    }
+
+    setTimeout(function () {
+        $('.notifier').fadeOut('slow');
+    }, 5000);
+    // $('#notify-main').click(function() { $(this).fadeOut('fast') });
+    hideThis = function ($this)
+    {
+        $($this).fadeOut('fast');
+    }
+});
+</pre>
+
+<p></p></code>
+
+<h4>
+<a id="and-call-like-this" class="anchor" href="#and-call-like-this" aria-hidden="true"><span class="octicon octicon-link"></span></a>and call like this</h4>
+
+<pre>
+var test = 'testing jquery notification';
+$('body').notify(test, '');
+</pre>
+</h4>
+
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/ibeing/tiny-notifier-jquery">jQuery Tiny Notifier </a> is maintained by <a href="https://github.com/ibeing">ibeing</a>.</span>
 
