@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>A Tiny Notifier: jQuery</title>
+	<script src="jquery-2.1.4.min.js"></script>
+	<script src="notifier.js"></script>
+	<link rel="stylesheet" href="notifier.css">
+</head>
+<body>
+	<script>
+		$(document).ready(function() {
+			var text = 'testing jquery notification';
+			$('body').notify(text);
+		});
+	</script>
+</body>
+</html>
